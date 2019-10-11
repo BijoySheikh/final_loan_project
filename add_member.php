@@ -125,6 +125,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
   </nav>
 
 
+
+
+
   <div class="container-fluid">
   <!-- member add Section -->
   <section class="page-section Custom-form" ng-app="myApp" ng-controller="myCtrl">
@@ -132,7 +135,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
       <div class="row justify-content-center mt-3">
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
       <div class="user-form mt-3">
-            <form action="insert.php" method="POST" autocomplete="off" onsubmit="return check_blank()">
+
+
+
+            <form action="insert.php" method="POST" enctype="multipart/form-data" autocomplete="off" onsubmit="return check_blank()">
                 <div class="row justify-content-center" >
                   <div class="col-md-6" >
                       <input class="mt-3" id="m_name"  type="text" ng-model="name" name="m_name"  placeholder="নাম*"><br>
@@ -141,10 +147,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
                       <input class="mt-3" type="text"  name="refer_name" placeholder="জামিনদারের নাম"><br>
                       <input class="mt-3" type="text"  name="present_addr"  placeholder="বর্তমান ঠিকানা"><br>
                       <input class="mt-3" type="text"  name="permanent_addr"  placeholder="স্থায়ী ঠিকানা"><br>
-                      <label for="upload_img" class="btn btn-warning mt-4">ছবি যোগ করুন</label>
-                      <input style=" display:none;" class="mb-5 mt-3" type="file" name="upload_img" id="upload_img" accept="image/*">
+
+
+
                       
-                  </div>
+        
+
+                      <input class="mt-2"  type="file" name="fileToUpload" id="fileToUpload">
+                     
+
+
+
+                     <!-- <label for="upload_img" class="btn btn-warning mt-4">ছবি যোগ করুন</label>
+                      <input style=" display:none;" class="mb-5 mt-3" type="file" name="upload_img" id="upload_img" accept="image/*"> -->
+ 
+                </div>
                   <div class="col-md-6 col-sm-12 col-xs-12">
                       <input class="mt-3" type="number" name="loan_sirial"  placeholder="ঋণ নং"><br>
                       <input class="mt-3" name="loan_date" type="text" id="datepicker" placeholder="তারিখ*" min="2010-01-01" value="">
@@ -155,12 +172,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
                       <input class="mt-3" type="number" name="savings_amount"  placeholder="সঞ্চয়ের পরিমাণ"><br>
                   </div>   
                 </div>
-                <button  type="submit" class="btn btn-info mt-5 text-white btn-block" ><i class="fas fa-user-plus"></i>  নিবন্ধন করুন</button>       
-            </form>
+                <button  type="submit" value="Upload Image" name="submit"   class="btn btn-info mt-5 text-white btn-block" ><i class="fas fa-user-plus"></i>  নিবন্ধন করুন</button>       
+            </form> 
 
 
 
 
+            
             <script  >
 
             function check_blank() {

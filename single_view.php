@@ -126,24 +126,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 
 
 
-
-
-
-    
-
-
-
  
 <div class="container mt-3">
     <div class="row">
         <div class="col-sm-3">
             <div class="text-center">
-            <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+            <img src="" class="avatar img-circle img-thumbnail" alt="Member Image">
             </div>
         </div>
         <div class="col-sm-9">
             <div class="row">
                 <div class="col-sm-6">
+                <h3 class="mb-3">নাম: <?php echo $row["upload_img"]; ?></h3>
                 <h3 class="mb-3">নাম: <?php echo $row["m_name"]; ?></h3>
                 <p>সদস্য আই.ডি :  <?php echo $row["id"]; ?> </p>
                 <p>পিতার নাম: <?php echo $row["f_name"]; ?> </p>
@@ -172,7 +166,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 
 
 ?>
-
 
 
 
